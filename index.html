@@ -199,6 +199,19 @@
     display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
   }
 
+  /* ——— Всё по центру, строки ровные ——— */
+  .hero, .section .wrap { text-align: center; }
+  .eyebrow { justify-content: center; }
+  .eyebrow::after { content: ""; width: 40px; height: 1px; background: var(--gold); flex: none; }
+  h1 em { padding-left: 0; }
+  .lead, .lead-note { margin-left: auto; margin-right: auto; }
+  .hero-test { flex-direction: column; justify-content: center; }
+  .hero-test-note { text-align: center; max-width: 340px; }
+  .section-head { flex-direction: column; align-items: center; gap: 12px; }
+  .points li { grid-template-columns: 1fr; justify-items: center; gap: 14px; }
+  .points p { margin-left: auto; margin-right: auto; }
+  .lead, .lead-note, .points h3, .points p, .quote p, .contact .sub, .hero-test-note, h2 { text-wrap: balance; }
+
   /* ——— Плавное появление ——— */
   .reveal { opacity: 0; transform: translateY(18px); transition: opacity 1s ease, transform 1s ease; }
   .reveal.in { opacity: 1; transform: none; }
@@ -213,12 +226,10 @@
     .wrap { padding: 0 20px; }
     .top { padding: 20px 0; }
     .top-label { font-size: 10px; letter-spacing: .22em; }
-    h1 em { padding-left: .35em; }
     .eyebrow { font-size: 11px; letter-spacing: .2em; line-height: 1.9; }
-    .eyebrow::before { display: none; }
+    .eyebrow::before, .eyebrow::after { display: none; }
     .lead { font-size: 23px; }
-    .section-head { flex-direction: column; gap: 10px; }
-    .points li { grid-template-columns: 1fr; padding: 28px 0; }
+    .points li { padding: 28px 0; }
     .roman { font-size: 32px; }
     .cta { width: 100%; padding: 22px 24px; letter-spacing: .18em; }
     .hero-test { gap: 14px; }
@@ -299,7 +310,7 @@
 <section class="contact">
   <div class="wrap reveal">
     <h2>Начнём с разговора</h2>
-    <p class="sub">Расскажите, что вас беспокоит, — я отвечу лично.</p>
+    <p class="sub">Расскажите, что вас беспокоит, — я&nbsp;отвечу&nbsp;лично.</p>
     <a class="cta" href="https://t.me/Svet_Lana01" target="_blank" rel="noopener">
       Написать мне <span class="arrow" aria-hidden="true">→</span>
     </a>
