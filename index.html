@@ -87,6 +87,29 @@
     color: var(--muted); font-size: 16px; font-weight: 300; letter-spacing: .01em;
   }
 
+  .hero-test { margin-top: 44px; display: flex; align-items: center; gap: 22px; flex-wrap: wrap; }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 16px;
+    padding: 19px 36px; border: 1px solid var(--ink); border-radius: 999px;
+    color: var(--ink); text-decoration: none;
+    font-size: 14px; font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+    transition: background .35s ease, color .35s ease, border-color .35s ease;
+  }
+  .btn-outline .arrow { transition: transform .35s ease; font-size: 17px; letter-spacing: 0; }
+  .btn-outline:hover { background: var(--ink); color: var(--ivory); }
+  .btn-outline:hover .arrow { transform: translateX(6px); }
+  .btn-outline:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .hero-test-note { font-family: var(--serif); font-style: italic; font-size: 19px; color: var(--muted); max-width: 300px; line-height: 1.35; }
+
+  .quote-test {
+    display: inline-block; margin-top: 34px;
+    font-size: 13px; letter-spacing: .22em; text-transform: uppercase;
+    color: var(--gold-soft); text-decoration: none;
+    border-bottom: 1px solid rgba(201, 174, 130, .5); padding-bottom: 4px;
+    transition: color .3s ease, border-color .3s ease;
+  }
+  .quote-test:hover { color: #fff; border-color: #fff; }
+
   /* ——— С чем я работаю ——— */
   .section { padding: clamp(64px, 10vw, 112px) 0; border-top: 1px solid var(--hair); }
   .section-head {
@@ -198,6 +221,9 @@
     .points li { grid-template-columns: 1fr; padding: 28px 0; }
     .roman { font-size: 32px; }
     .cta { width: 100%; padding: 22px 24px; letter-spacing: .18em; }
+    .hero-test { gap: 14px; }
+    .btn-outline { width: 100%; justify-content: center; padding: 19px 22px; letter-spacing: .16em; }
+    .hero-test-note { max-width: none; width: 100%; text-align: center; font-size: 17px; }
     footer { flex-direction: column; gap: 6px; }
   }
 </style>
@@ -218,6 +244,12 @@
       и комфортно снижать вес — через понимание и поиск причин, а не «замазывая» симптомы.
     </p>
     <p class="lead-note reveal">Без голода, убийственных тренировок и мифов о ПП.</p>
+    <div class="hero-test reveal">
+      <a class="btn-outline" href="https://svlab27-web.github.io/kviz-svetlana/">
+        Пройти тест <span class="arrow" aria-hidden="true">→</span>
+      </a>
+      <span class="hero-test-note">Почему после 40 тело перестало слушаться? 2 минуты</span>
+    </div>
   </section>
 </div>
 
@@ -260,6 +292,7 @@
       Спорт, диеты, массажи, модные капельницы, аппаратную косметологию, таблетки для похудения,
       бессистемные БАДы и тренды биохакинга — <strong>давайте найдём причину.</strong>
     </p>
+    <a class="quote-test" href="https://svlab27-web.github.io/kviz-svetlana/">Начать с теста за 2 минуты →</a>
   </div>
 </section>
 
